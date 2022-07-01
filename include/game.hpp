@@ -21,7 +21,7 @@ auto InitGame(Texture &tex)
 {
 	minstd_rand rand_gen(time(0));
 
-	tex.loadFromFile("C:\\Users\\Aluno\\Desktop\\Flappy-Bird-IA\\flappy-bird.png");
+	tex.loadFromFile("..\\flappy-bird.png");
 	Sprite background(tex, IntRect(0, 0, 144, 256));
 
 	Vector2u window_s = Vector2u(378, 819);
@@ -161,8 +161,7 @@ inline void CloseGame(RenderWindow &window, vector<NeuralNetwork> &IAs)
 	std::string str = IAs.at(current_bird).print();
 
 	std::fstream file;
-	// file.open("..\\saves\\save-1 t.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
-	file.open("C:\\Users\\Aluno\\Desktop\\Dino-IA\\saves\\save-1 t.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
+	file.open("..\\saves\\save-1 t.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
 	file.clear();
 	file << str;
 	file.close();
@@ -170,6 +169,5 @@ inline void CloseGame(RenderWindow &window, vector<NeuralNetwork> &IAs)
 	Texture t;
 	t.create(window.getSize().x, window.getSize().y);
 	t.update(window);
-	// t.copyToImage().sav..-\\screenshots\\img.png");
-	t.copyToImage().saveToFile("C:\\Users\\Aluno\\Desktop\\Dino-IA\\screenshots\\img.png");
+	t.copyToImage().saveToFile("..\\screenshots\\img.png");
 }
