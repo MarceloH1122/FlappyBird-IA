@@ -4,8 +4,7 @@
 int main()
 {
 	Font font;
-	//font.loadFromFile("fonts\\Roboto-Medium.ttf");
-	font.loadFromFile("C:\\Users\\Aluno\\Desktop\\Flappy-Bird-IA\\fonts\\Roboto-Medium.ttf");
+	font.loadFromFile("fonts\\Roboto-Medium.ttf");
 
 	Text status_population("", font, 26.25);
 	{
